@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio1</title>
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+<body onload="hola();">
+	<script type="text/javascript">
+		var n=10;
+		
+		function cuenta(){
+			
+			cuentas=setInterval(numbers,1000);
+			
+		}
+
+		function numbers(){
+			
+				var mensaje=document.getElementById('mensaje');
+				mensaje.innerHTML=n;				
+				n=n-1;
+				if (n==-1) {
+					clearInterval(cuentas);
+					console.log("termine");
+					mensaje.innerHTML='F I N';
+				}
+				
+		}
+
+		function hola() {
+			 var mensaje=document.getElementById('mensaje');
+
+			 mensaje.innerHTML='H O L A';
+
+			 funcion=setTimeout(cuenta,5000);
+		}
+	</script>
+	<div id="mensaje">
+		
+	</div>
+	<a id="boton" href=""> Ver Ejercicio 2</a>
+
+</body>
+</html>
